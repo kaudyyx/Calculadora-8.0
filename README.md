@@ -1,1 +1,0 @@
-# Calculadora-8.0
