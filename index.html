@@ -72,6 +72,12 @@
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
 
+        /* Ajuste na visibilidade dos números */
+        body:not(.dark-mode) .buttons button,
+        body.dark-mode .buttons button:not(.clear) {
+            color: #333;
+        }
+
         button.dark-mode {
             background-color: #555;
         }
@@ -79,12 +85,6 @@
         button.dark-mode:hover {
             background-color: #777;
         }
-
-        /* Ajuste na visibilidade dos números no modo claro */
-        body:not(.dark-mode) .buttons button {
-            color: #333;
-        }
-
     </style>
 </head>
 <body>
@@ -108,7 +108,7 @@
 
             <button onclick="appendValue('0')">0</button>
             <button onclick="appendValue('.')">.</button>
-            <button onclick="calculate()">="</button>
+            <button onclick="calculate()">=</button>
             <button onclick="appendValue('+')">+</button>
 
             <button onclick="clearDisplay()" class="clear">C</button>
